@@ -3,19 +3,16 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "deploy": "wrangler deploy",
-    "dev": "wrangler dev",
-    "dev:cron": "wrangler dev --test-scheduled",
-    "start": "wrangler dev",
-    "cf-typegen": "wrangler types"
+    "build": "tsc"
   },
   "devDependencies": {
-    "@cloudflare/workers-types": "^4.20241011.0",
-    "typescript": "^5.5.2",
-    "wrangler": "^3.60.3"
+    "@types/express": "^5.0.0",
+    "nodemon": "^3.1.7",
+    "typescript": "^5.5.2"
   },
   "dependencies": {
+    "@codegenie/serverless-express": "^4.15.0",
     "@supabase/supabase-js": "^2.45.5",
-    "dotenv": "^16.4.5"
+    "express": "^4.21.1"
   }
 }

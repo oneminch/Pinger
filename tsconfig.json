@@ -1,21 +1,13 @@
 {
   "compilerOptions": {
-    "target": "es2021",
-    "lib": ["es2021"],
-    "jsx": "react-jsx",
-    "module": "es2022",
-    "moduleResolution": "Bundler",
-    "types": ["@cloudflare/workers-types/2023-07-01"],
-    "resolveJsonModule": true,
-    "allowJs": true,
-    "checkJs": false,
-    "noEmit": true,
-    "isolatedModules": true,
-    "allowSyntheticDefaultImports": true,
-    "forceConsistentCasingInFileNames": true,
+    "target": "ES2018",
+    "module": "CommonJS",
     "strict": true,
-    "skipLibCheck": true
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "outDir": "./dist"
   },
-  "exclude": ["test", "node_modules"],
-  "include": ["src/**/*.ts"]
+  "include": ["src/**/*", "temp/asyncSetup.ts", "temp/lambda.ts"],
+  "exclude": ["node_modules"]
 }
