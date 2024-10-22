@@ -1,8 +1,10 @@
 # Pinger (AWS)
 
-Pinger is a small backend (I built for fun) whose purpose is to make scheduled requests to a certain database provider to keep it alive.
+Pinger is a small Node backend (I built for fun) whose purpose is to make scheduled requests to a certain database provider to keep it alive.
 
 > This branch contains project code for deployment using Docker and AWS Lambda. It also relies on AWS' EventBridge Scheduler feature to periodically execute on set intervals.
+>
+> A different version of the app that can be deployed to Cloudflare Workers is on the [`main`](https://github.com/oneminch/Pinger/tree/main) branch.
 
 ## Initial Setup
 
