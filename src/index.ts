@@ -1,5 +1,6 @@
-import { createClient } from "@supabase/supabase-js";
 import dotenv from "dotenv";
+import { getTursoClient, queryTurso, TursoConfig } from "./db/turso";
+import { getDatabaseConfig } from "./db/config";
 
 // Load environment variables when running locally
 if (process.env.NODE_ENV !== "production") {
@@ -9,6 +10,8 @@ if (process.env.NODE_ENV !== "production") {
 interface Env {
   SUPABASE_PROJECT_URL: string;
   SUPABASE_PUBLIC_ANON_KEY: string;
+  TURSO_DATABASE_URL: string;
+  TURSO_AUTH_TOKEN: string;
 }
 
 export default {
@@ -17,13 +20,11 @@ export default {
     env: Env,
     ctx: ExecutionContext
   ) {
-    const supabase = createClient(
-      env.SUPABASE_PROJECT_URL,
-      env.SUPABASE_PUBLIC_ANON_KEY
-    );
-
     try {
-      const { error } = await supabase.from("Product").select("title").limit(1);
+      const dbConfig = getDatabaseConfig(env, "turso") as TursoConfig;
+      const tursoClient = getTursoClient(dbConfig);
+
+      const { error } = await queryTurso(tursoClient);
 
       if (error) throw error;
       console.log("Database queried successfully");
