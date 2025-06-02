@@ -15,7 +15,7 @@
     "wrangler": "^3.114.8"
   },
   "dependencies": {
-    "@libsql/client": "^0.15.4",
+    "@libsql/client": "^0.15.8",
     "@supabase/supabase-js": "^2.49.4",
     "dotenv": "^16.5.0"
   }
