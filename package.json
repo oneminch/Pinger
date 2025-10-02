@@ -10,13 +10,13 @@
     "cf-typegen": "wrangler types"
   },
   "devDependencies": {
-    "@cloudflare/workers-types": "^4.20250801.0",
-    "typescript": "^5.9.2",
-    "wrangler": "^3.114.12"
+    "@cloudflare/workers-types": "^4.20251001.0",
+    "typescript": "^5.9.3",
+    "wrangler": "^3.114.14"
   },
   "dependencies": {
-    "@libsql/client": "^0.15.10",
-    "@supabase/supabase-js": "^2.53.0",
-    "dotenv": "^17.2.1"
+    "@libsql/client": "^0.15.15",
+    "@supabase/supabase-js": "^2.58.0",
+    "dotenv": "^17.2.3"
   }
 }
